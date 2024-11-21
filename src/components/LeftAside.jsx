@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const LeftAside = () => {
     const [categories, setCategories] = useState([]);
@@ -7,13 +8,12 @@ const LeftAside = () => {
         .then(res=>res.json())
         .then(data=>setCategories(data.data.news_category))
     },[])
-    console.log(categories)
     return (
         <div>
             <p className="font-semibold mb-5">All Category ({categories.length})</p>
             <div className="flex flex-col gap-3">
                 {
-                    categories.map(category=> <button key={category.category_id} className="btn">{category.category_name}</button>)
+                    categories.map(category=> <NavLink to={`/category/${category.category_id}`} key={category.category_id} className="btn">{category.category_name}</NavLink>)
                 }
             </div>
         </div>

@@ -1,11 +1,11 @@
+import FindUs from "./FindUs";
+import SocialLogin from "./SocialLogin";
 
 const RightAside = () => {
     return (
         <div>
-            <p className="font-semibold mb-5">Login With</p>
-            <div>
-
-            </div>
+            <SocialLogin></SocialLogin>
+            <FindUs></FindUs>
         </div>
     );
 };
