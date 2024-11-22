@@ -31,7 +31,7 @@ const NewsCard = ({ news }) => {
         <h2 className="text-2xl text-gray-700 font-bold">{title}</h2>
         <img className="mt-5 mb-7 rounded-md" src={image_url} alt={title} />
         <p className="text-gray-600">{shortDetails}</p>
-        <Link className="text-[#FF8C47]">Read More</Link>
+        <Link to={`/news/${news._id}`} className="text-[#FF8C47]">Read More</Link>
         <hr className="my-5" />
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">

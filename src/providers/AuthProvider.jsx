@@ -45,7 +45,6 @@ const logOut = () =>{
     user,
     setUser,
     createNewUser,
-    updateUserProfile,
     logOut,
     loginUser,
   };
