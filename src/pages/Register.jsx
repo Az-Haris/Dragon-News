@@ -4,7 +4,7 @@ import { AuthContext } from "../Contexts/AuthContext";
 
 const Register = () => {
 
-    const { createNewUser, setUser } = useContext(AuthContext);
+    const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -22,9 +22,11 @@ const Register = () => {
             setUser(user);
         })
         .catch(err=>console.log(err))
+
+        
     }
   return (
-    <div className="min-h-screen flex justify-center items-center">
+    <div className="py-10 flex justify-center items-center">
       <div className="card rounded-md bg-base-100 w-full max-w-md shrink-0">
         <form onSubmit={handleSubmit} className="card-body">
           <h2 className="text-center font-semibold text-2xl text-gray-600">
@@ -61,6 +63,7 @@ const Register = () => {
               <span className="label-text font-semibold">Email</span>
             </label>
             <input
+            autoComplete="surname"
               type="email"
               name="email"
               placeholder="email"
@@ -73,6 +76,7 @@ const Register = () => {
               <span className="label-text font-semibold">Password</span>
             </label>
             <input
+            autoComplete="current-password"
               type="password"
               name="password"
               placeholder="password"
