@@ -14,7 +14,7 @@ const NewsCard = ({ news }) => {
         <div className="flex items-center gap-3">
           <img className="w-12 rounded-full" src={author.img} alt="" />
           <div>
-            <h4 className="text-xl font-bold">{author.name}</h4>
+            <h4 className="text-lg font-bold text-gray-600">{author.name}</h4>
             <p className="text-sm text-gray-500">{author.published_date}</p>
           </div>
         </div>
@@ -28,7 +28,7 @@ const NewsCard = ({ news }) => {
         </div>
       </div>
       <div className="p-5 ">
-        <h2 className="text-2xl font-bold">{title}</h2>
+        <h2 className="text-2xl text-gray-700 font-bold">{title}</h2>
         <img className="mt-5 mb-7 rounded-md" src={image_url} alt={title} />
         <p className="text-gray-600">{shortDetails}</p>
         <Link className="text-[#FF8C47]">Read More</Link>
